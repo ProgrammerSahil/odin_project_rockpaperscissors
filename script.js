@@ -61,23 +61,17 @@ function playRound(computer, player)
     }
 }
 
-function game(){
-    let P = 0;
-    let C = 0;
 
-    for(let i = 0; i < 5; i++){
-        if(playRound(getComputerChoice(), playerSelection()) == "computer"){ C++;}
-        else if(playRound(getComputerChoice(), playerSelection())== "player"){ P++;}
-    }
-    if(P>C){
-        console.log("Player Wins");
-    }
-    else if(C>P){
-        console.log("Computer Wins");
-    }
-    else{
-        console.log("NObody Won")
-    }
-}
 
-game();
+window.onload=function(){
+    
+    const rockbtn = document.querySelector('#rock');
+    rockbtn.addEventListener('click', () => playRound(getComputerChoice(), availableChoices[0]));
+
+    const paperbtn = document.querySelector('#paper');
+    paperbtn.addEventListener('click', () => playRound(getComputerChoice(), availableChoices[1]));
+
+    const scissorsbtn = document.querySelector('#scissors');
+    scissorsbtn.addEventListener('click', () => playRound(getComputerChoice(), availableChoices[2]));
+
+  }
