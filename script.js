@@ -14,49 +14,42 @@ function playerSelection(){
 
 function playRound(computer, player)
 {
+    const resultContainer = document.querySelector('.resultContainer');
+
     if(computer == "Rock")
     {
         if(player == "Rock"){
-            console.log("Tie, Both Chose Rocks");
-            return "none";
+            resultContainer.textContent = "Tie, Both Chose Rocks";
         }
         else if(player == "Paper"){
-            console.log("Player Wins, Paper beats Rock");
-            return "player";
+            resultContainer.textContent = "Player Wins, Paper beats Rock";
         }
         else{
-            console.log("Computer Wins, Rock beats Scissors");
-            return "computer";
+            resultContainer.textContent = "Computer Wins, Rock beats Scissors";
         }
     }
     else if(computer == "Paper")
     {
         if(player == "Paper"){
-            console.log("Tie, Both Chose Paper");
-            return "none";
+            resultContainer.textContent = "Tie, Both Chose Paper";
         }
         else if(player == "Scissors"){
-            console.log("Player Wins, Scissors beats Paper");
-            return "player";
+            resultContainer.textContent = "Player Wins, Scissors beats Paper";
         }
         else{
-            console.log("Computer Wins, Paper beats Rock");
-            return "computer";
+            resultContainer.textContent = "Computer Wins, Paper beats Rock";
         }
     }
     else
     {
         if(player == "Scissors"){
-            console.log("Tie, Both Chose Scissors");
-            return "none";
+            resultContainer.textContent = "Tie, Both Chose Scissors";
         }
         else if(player == "Rock"){
-            console.log("Player Wins, Rock beats Scissors");
-            return "player";
+            resultContainer.textContent = "Player Wins, Rock beats Scissors";
         }
         else{
-            console.log("Computer Wins, Scissors beats Paper");
-            return "computer";
+            resultContainer.textContent = "Computer Wins, Scissors beats Paper";
         }
     }
 }
